@@ -42,8 +42,8 @@
           "AccessToken": 3600,
           "AuthorizationCode": 600,
           "DeviceCode": 600,
-          "IdToken": 3600,
-          "RefreshToken": 86400
+          "IdToken": 864000,
+          "RefreshToken": 864000
         }
       }
     }

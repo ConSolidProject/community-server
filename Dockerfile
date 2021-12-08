@@ -38,10 +38,10 @@ COPY --from=build /community-server/node_modules ./node_modules
 COPY --from=build /community-server/templates ./templates
 
 ## Informs Docker that the container listens on the specified network port at runtime
-EXPOSE 3000
+EXPOSE 5000
 
 ## Set command run by the container
 ENTRYPOINT [ "node", "bin/server.js" ]
 
 ## By default run in filemode (overriden if passing alternative arguments)
-CMD [ "-c", "config/file.json", "-f", "/data" ]
+CMD [ "-c", "config/file.json", "-f", "/data", "-p", "5000" ]

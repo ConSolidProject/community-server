@@ -52,7 +52,7 @@
     "lint": "eslint . --cache --ignore-path .gitignore",
     "prepare": "npm run build",
     "start": "node ./bin/server.js",
-    "start:file": "node ./bin/server.js -c config/file.json -f ./data",
+    "start:file": "node ./bin/server.js -c config/file.json -f ./data -p 5000",
     "test": "npm run test:ts && npm run jest",
     "test:deploy": "test/deploy/validate-package.sh",
     "test:ts": "tsc -p test --noEmit",

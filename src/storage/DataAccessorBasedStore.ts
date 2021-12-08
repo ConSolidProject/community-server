@@ -429,9 +429,9 @@ export class DataAccessorBasedStore implements ResourceStore {
     // Solid, §5.3: "Servers MUST NOT allow HTTP POST, PUT and PATCH to update a container’s containment triples;
     // if the server receives such a request, it MUST respond with a 409 status code."
     // https://solid.github.io/specification/protocol#writing-resources
-    if (quads.some((quad): boolean => quad.predicate.value === LDP.contains)) {
-      throw new ConflictHttpError('Container bodies are not allowed to have containment triples.');
-    }
+    // if (quads.some((quad): boolean => quad.predicate.value === LDP.contains)) {
+    //   throw new ConflictHttpError('Container bodies are not allowed to have containment triples.');
+    // }
 
     // Input content type doesn't matter anymore
     representation.metadata.removeAll(CONTENT_TYPE);
